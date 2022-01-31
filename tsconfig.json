@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "ESNext"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "isolatedModules": true,
+    "jsx": "react"
+  },
+  "include": [
+    "./src"
+  ]
+}
