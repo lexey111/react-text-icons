@@ -51,6 +51,9 @@ const watchConfig = {
 }
 
 // copy index.html to dist folder
+if (!fs.existsSync(outputFolder)) {
+    fs.mkdirSync(outputFolder);
+}
 fs.copyFileSync(path.resolve('./src/index.html'), path.join(outputFolder, 'index.html'));
 
 console.time('# Build time');
