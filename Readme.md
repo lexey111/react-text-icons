@@ -20,6 +20,7 @@ To just build the application (despite it has very little sense) use
 
 * `npm run build` or `npm run build:dev`
 * `npm run watch` for watch mode.
+* `npm run lint` to start linting with ESLint.
 
 The compiled files are in the `./dist` folder.
 
@@ -33,9 +34,9 @@ To expand it to the "enterprise" level, you can easily add here:
 
 * SASS/LESS support
 * Static assets (fonts, images etc.)
-* ESLint for TS + CSS (style check)
+* More linting, e.g., for CSS (style check)
 * Jest + Enzyme + Playwright runners - Unit Tests and e2e Tests
-* More sophisticated and performant HTTP server (Koa).
+* More sophisticated and performant HTTP server like Koa.
 
 If there are enough requests, I will do so.
 

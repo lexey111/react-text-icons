@@ -3,9 +3,7 @@ import {TIconProps} from './icons.interface';
 import {IconsMap} from './icons.map';
 
 export const Icon: React.FC<TIconProps> = (props: TIconProps) => {
-    const iconName = props.type ? props.type : 'unknown';
-
-    const iconContent = IconsMap[iconName];
+    const iconContent = IconsMap[props.type];
 
     if (!iconContent) {
         return <div className={'app-icon unknown-icon'}>?</div>; // icon not found
@@ -18,7 +16,7 @@ export const Icon: React.FC<TIconProps> = (props: TIconProps) => {
         : iconContent as JSX.Element;
 
     const className = 'app-icon'
-        + ' __type' + props.type
+        + ' __type_' + (props.type as string)
         + (typeof iconContent['ownClass'] === 'string' ? ' ' + iconContent['ownClass'] : '')
         + (props.className ? ' ' + props.className : '');
 

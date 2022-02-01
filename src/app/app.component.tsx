@@ -1,5 +1,5 @@
 import React from 'react';
-import {IconList} from "./icon-list.component";
+import {IconList} from './icon-list.component';
 
 export const App: React.FC = () => {
     return <div>
@@ -20,6 +20,6 @@ export const App: React.FC = () => {
             <li>TypeScript</li>
             <li>React</li>
         </ul>
-        <p>&copy; lexey111, ISC</p>
+        <p>&copy; lexey111, MIT</p>
     </div>;
 };

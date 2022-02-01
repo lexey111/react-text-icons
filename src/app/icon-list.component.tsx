@@ -1,6 +1,6 @@
 import React from 'react';
 import {IconsMap} from './icons/icons.map';
-import {Icon} from "./icons/icon.component";
+import {Icon} from './icons/icon.component';
 
 function displayClick(type: string) {
     alert(`import {Icon} from "./icon.component";
