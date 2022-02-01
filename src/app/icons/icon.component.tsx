@@ -1,23 +1,23 @@
 import React from 'react';
-import {TIconProps} from './icons.interface';
+import {TIconMapContent, TIconProps} from './icons.interface';
 import {IconsMap} from './icons.map';
 
 export const Icon: React.FC<TIconProps> = (props: TIconProps) => {
-    const iconContent = IconsMap[props.type];
+    const iconRecord = IconsMap[props.type] as TIconMapContent;
 
-    if (!iconContent) {
+    if (!iconRecord) {
         return <div className={'app-icon unknown-icon'}>?</div>; // icon not found
     }
 
-    const viewBox = typeof iconContent['viewBox'] === 'string' ? iconContent['viewBox'] : '64 64 896 896';
+    const viewBox = typeof iconRecord['viewBox'] === 'string' ? iconRecord['viewBox'] : '64 64 896 896';
 
-    const viewContent = typeof iconContent['content'] !== 'undefined'
-        ? iconContent['content'] as JSX.Element
-        : iconContent as JSX.Element;
+    const viewContent = typeof iconRecord['content'] !== 'undefined'
+        ? iconRecord['content'] as JSX.Element
+        : iconRecord as JSX.Element;
 
     const className = 'app-icon'
         + ' __type_' + (props.type as string)
-        + (typeof iconContent['ownClass'] === 'string' ? ' ' + iconContent['ownClass'] : '')
+        + (typeof iconRecord['ownClass'] === 'string' ? ' ' + iconRecord['ownClass'] : '')
         + (props.className ? ' ' + props.className : '');
 
     if (props.onClick) {

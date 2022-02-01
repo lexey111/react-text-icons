@@ -1,5 +1,5 @@
 import React from 'react';
-import {IconsMap} from './icons/icons.map';
+import {IconsMap, TIconType} from './icons/icons.map';
 import {Icon} from './icons/icon.component';
 
 function displayClick(type: string) {
@@ -9,7 +9,7 @@ function displayClick(type: string) {
 }
 
 const generatorFn = Object.keys(IconsMap).map(type => <div className={'icon-list-example'} key={type}>
-        <Icon type={type} onClick={() => displayClick(type)}/>
+        <Icon type={type as TIconType} onClick={() => displayClick(type)}/>
         <div className={'icon-name'}>{type}</div>
     </div>
 );
@@ -20,7 +20,7 @@ export const IconList: React.FC = () => {
             {generatorFn}
 
             <div className={'icon-list-example'}>
-                <Icon type={'unknown'}/>
+                <Icon type={'unknown' as TIconType}/>
                 <div className={'icon-name'}>unknown</div>
             </div>
         </div>

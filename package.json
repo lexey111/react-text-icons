@@ -4,7 +4,9 @@
   "description": "Simple approach to use SVG icons in React applications",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint --cache .",
+    "eslint": "eslint --cache .",
+    "tsclint": "tsc --project tsconfig.json",
+    "lint": "npm run eslint && npm run tsclint",
     "build": "npm run lint && node esbuild.js --production",
     "build:dev": "node esbuild.js --development",
     "watch": "node esbuild.js --development --watch",
